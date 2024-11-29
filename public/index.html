@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube 데이터 분석기</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>YouTube 데이터 분석기</h1>
+    </header>
+    
+    <div class="container">
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="검색어를 입력하세요"
+                class="search-input"
+            >
+            <div class="sort-container">
+                <select id="sortSelect" class="sort-select">
+                    <option value="tension">노출온도 순</option>
+                    <option value="views">조회수 순</option>
+                    <option value="subscribers">구독자 순</option>
+                </select>
+            </div>
+            <button id="searchButton" class="search-button">검색</button>
+        </div>
+
+        <div class="loading-spinner" id="loading" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+        
+        <div class="results-container" id="resultsTable"></div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/api.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
