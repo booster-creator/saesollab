@@ -195,4 +195,41 @@ body {
 .sort-select:focus {
     outline: none;
     border-color: var(--button-color);
+}
+
+.footer {
+    background-color: var(--card-background);
+    border-top: 1px solid var(--border-color);
+    padding: 24px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-info {
+    color: var(--text-secondary);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.footer-copyright {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .footer-info {
+        font-size: 11px;
+        line-height: 1.6;
+        word-break: keep-all;
+    }
+    
+    .footer-content {
+        padding: 0 16px;
+    }
 } 
