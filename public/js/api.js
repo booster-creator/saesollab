@@ -1,11 +1,11 @@
 class YouTubeAPI {
     constructor() {
-        this.baseUrl = 'http://localhost:3000/api/youtube';
+        this.baseUrl = '/.netlify/functions/youtube';
     }
 
     async searchVideos(query, maxResults = 30) {
         try {
-            const response = await fetch(`${this.baseUrl}/search`, {
+            const response = await fetch(this.baseUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
