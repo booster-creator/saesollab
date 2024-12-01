@@ -1,8 +1,6 @@
 class YouTubeAPI {
     constructor() {
-        this.baseUrl = window.location.hostname === 'localhost' 
-            ? 'http://localhost:3000/api/youtube/search'
-            : '/.netlify/functions/youtube';
+        this.baseUrl = '/.netlify/functions/youtube';
     }
 
     async searchVideos(query, maxResults = 30) {
